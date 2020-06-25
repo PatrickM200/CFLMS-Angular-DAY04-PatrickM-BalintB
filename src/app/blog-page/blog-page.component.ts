@@ -12,4 +12,10 @@ export class BlogPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  windowScroll() {
+
+    window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+
+  }
+
 }

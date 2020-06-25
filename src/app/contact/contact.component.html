@@ -5,6 +5,7 @@
     <span class="help-block" *ngIf="nameCtrl.invalid && nameCtrl.touched">
       Please enter your a name!
     </span>
+    <br>
     <label for="email">Your Email</label>
     <input type="text" id="email" name="email" class="form-control" ngModel required #emailCtrl="ngModel" />
     <span class="help-block" *ngIf="emailCtrl.invalid && emailCtrl.touched">
