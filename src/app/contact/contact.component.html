@@ -27,9 +27,11 @@
 <div *ngIf="formData" class="card mt-4">
   <h5 class="card-header">Your contact informations</h5>
   <div class="card-body">
-    <h5 class="card-title">{{ formData.name }}</h5>
-    <p class="card-text">{{ formData.email }}</p>
-    <p class="card-text">{{ formData.gender }}</p>
-    <a style="cursor: pointer;" class="btn btn-primary" (click)="sendData()">Send Data</a>
+    <h5 class="card-title">Name: {{ formData.name }}</h5>
+    <p class="card-text">Email: {{ formData.email }}</p>
+    <p class="card-text">Gender: {{ formData.gender }}</p>
+    <button class="btn btn-primary" type="button" [disabled]="form.invalid" (click)="sendData()">
+      Send data
+    </button>
   </div>
 </div>
