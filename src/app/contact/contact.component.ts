@@ -7,6 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
+  availableGenders = [
+    {
+      display: 'None', value: 'none'
+    },
+    {
+      display: 'Women', value: 'women'
+    },
+    {
+      display: 'Men', value: 'men'
+    }
+  ]
+
   constructor() { }
 
   ngOnInit(): void {

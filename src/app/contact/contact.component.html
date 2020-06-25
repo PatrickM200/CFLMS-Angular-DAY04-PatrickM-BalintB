@@ -1,1 +1,25 @@
-<p>contact works!</p>
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+  <div class="form-group">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" class="form-control" ngModel required #nameCtrl="ngModel" />
+    <span class="help-block" *ngIf="nameCtrl.invalid && nameCtrl.touched">
+      Please enter your a name!
+    </span>
+    <label for="email">Your Email</label>
+    <input type="text" id="email" name="email" class="form-control" ngModel required #emailCtrl="ngModel" />
+    <span class="help-block" *ngIf="emailCtrl.invalid && emailCtrl.touched">
+      Please enter your a email!
+    </span>
+  </div>
+  <div class="form-group">
+    <label for="gender">Choose Gender</label>
+    <select name="gender" id="gender" class="form-control" ngModel>
+      <option *ngFor="let gender of availableGenders" value="{{ gender.value }}">
+        {{ gender.display }}
+      </option>
+    </select>
+  </div>
+  <button class="btn btn-primary" type="submit" [disabled]="form.invalid">
+    Contact
+  </button>
+</form>
