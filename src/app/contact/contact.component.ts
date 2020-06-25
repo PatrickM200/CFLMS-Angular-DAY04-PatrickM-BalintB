@@ -33,6 +33,7 @@ export class ContactComponent implements OnInit {
     console.log(submittedForm)
 
     this.formData = submittedForm.value
+    submittedForm.reset()
   }
 
   sendData() {

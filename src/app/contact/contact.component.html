@@ -30,7 +30,7 @@
     <h5 class="card-title">Name: {{ formData.name }}</h5>
     <p class="card-text">Email: {{ formData.email }}</p>
     <p class="card-text">Gender: {{ formData.gender }}</p>
-    <button class="btn btn-primary" type="button" [disabled]="form.invalid" (click)="sendData()">
+    <button class="btn btn-primary" type="button" (click)="sendData()">
       Send data
     </button>
   </div>
