@@ -19,9 +19,24 @@ export class ContactComponent implements OnInit {
     }
   ]
 
+  formData
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(submittedForm) {
+    if (submittedForm.invalid) {
+      return
+    }
+    console.log(submittedForm)
+
+    this.formData = submittedForm.value
+  }
+
+  sendData() {
+    this.formData = ''
   }
 
 }
